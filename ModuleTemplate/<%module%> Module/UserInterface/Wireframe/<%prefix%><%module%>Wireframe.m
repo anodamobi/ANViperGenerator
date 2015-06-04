@@ -46,7 +46,7 @@
 
 - (void)dismiss<%module%>Controller
 {
-    [self.presentedController popViewControllerAnimated:self.<%moduleLower%>Controller];
+    [self.presentedController popViewControllerAnimated:YES];
 }
 
 @end
