@@ -2,7 +2,7 @@
 //  <%prefix%><%module%>Wireframe.m
 //  <%project%>
 //
-//  Created by Oksana Kovalchuk on 1/11/15.
+//  Created by ANODA on 1/11/15.
 //  Copyright (c) 2015 ANODA. All rights reserved.
 //
 
@@ -21,7 +21,7 @@
 
 @implementation <%prefix%><%module%>Wireframe
 
-- (void)presentTableControllerFromNavigationController:(UINavigationController *)nc
+- (void)present<%module%>ControllerFromNavigationController:(UINavigationController*)nc
 {
     <%prefix%><%module%>VC* <%moduleLower%>Controller = [<%prefix%><%module%>VC new];
     <%prefix%><%module%>Interactor* interactor = [<%prefix%><%module%>Interactor new];
@@ -46,7 +46,7 @@
 
 - (void)dismiss<%module%>Controller
 {
-    [self.presentedController popViewControllerAnimated:self.<%moduleLower%>Controller];
+    [self.presentedController popViewControllerAnimated:YES];
 }
 
 @end
