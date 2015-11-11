@@ -22,7 +22,7 @@
     return self;
 }
 
-- (void)setupStorageFromArray:(NSArray*)array
+- (void)setupStorageWithArray:(NSArray*)array
 {
     [self.storage batchUpdateWithBlock:^{
         [self _addSectionWithItems:[self _convertToViewModels:array]];
@@ -35,8 +35,7 @@
 {
     return [[models.rac_sequence map:^id(id value) {
         
-        <%prefix%><%module%>CellViewModel* viewModel = [<%prefix%><%module%>CellViewModel new];
-        [viewModel updateWithItem:value];
+        <%prefix%><%module%>CellViewModel* viewModel = [<%prefix%><%module%>CellViewModel viewModelWithItem:value];
         
         return viewModel;
     }] array];

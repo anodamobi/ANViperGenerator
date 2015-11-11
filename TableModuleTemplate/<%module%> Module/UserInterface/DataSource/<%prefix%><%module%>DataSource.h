@@ -17,6 +17,6 @@
 @property (nonatomic, strong) ANMemoryStorage* storage;
 @property (nonatomic, weak) id<<%prefix%><%module%>DataSourceDelegate> delegate;
 
-- (void)setupStorageFromArray:(NSArray*)array;
+- (void)setupStorageWithArray:(NSArray*)array;
 
 @end

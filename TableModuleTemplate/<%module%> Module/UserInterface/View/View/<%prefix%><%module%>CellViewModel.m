@@ -10,16 +10,17 @@
 
 @interface <%prefix%><%module%>CellViewModel ()
 
-@property (nonatomic, strong) id currentModel;
+@property (nonatomic, strong) id item;
 
 @end
 
 @implementation <%prefix%><%module%>CellViewModel
 
-- (void)updateWithItem:(id)item
++ (instancetype)viewModelWithItem:(id)item
 {
-    self.currentModel = item;
+    <%prefix%><%module%>CellViewModel* model = [self new];
+    model.item = item;
+    return model;
 }
-
 
 @end

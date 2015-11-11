@@ -8,7 +8,10 @@
 
 @interface <%prefix%><%module%>Wireframe : NSObject
 
+- (void)present<%module%>ControllerFromWindow:(UIWindow*)window;
 - (void)present<%module%>ControllerFromNavigationController:(UINavigationController*)nc;
+- (void)presentModalOn:(UIViewController*)viewController;
+
 - (void)dismiss<%module%>Controller;
 
 @end

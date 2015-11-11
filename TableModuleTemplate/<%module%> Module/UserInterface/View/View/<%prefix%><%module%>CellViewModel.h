@@ -8,6 +8,6 @@
 
 @interface <%prefix%><%module%>CellViewModel : NSObject
 
-- (void)updateWithItem:(id)item;
++ (instancetype)viewModelWithItem:(id)item;
 
 @end

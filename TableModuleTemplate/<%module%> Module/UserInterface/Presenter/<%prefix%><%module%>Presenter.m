@@ -39,7 +39,7 @@
 
 - (void)dataLoaded:(NSArray*)array
 {
-    [self.tableDataSource setupStorageFromArray:array];
+    [self.tableDataSource setupStorageWithArray:array];
 }
 
 #pragma mark - Module Interface
