@@ -2,18 +2,19 @@
 //  <%prefix%><%module%>VC.m
 //  <%project%>
 //
-//  Created by Oksana Kovalchuk on 1/3/15.
+//  Created by ANODA on 1/3/15.
 //  Copyright (c) 2015 ANODA. All rights reserved.
 //
 
 #import "<%prefix%><%module%>VC.h"
-#import "<%prefix%>TableContainerView.h"
+#import "ANTableContainerView.h"
 #import "<%prefix%><%module%>Controller.h"
 #import "<%prefix%><%module%>DataSource.h"
+#import "<%prefix%><%module%>CellViewModel.h"
 
-@interface <%prefix%><%module%>C () <<%prefix%><%module%>ControllerDelegate>
+@interface <%prefix%><%module%>VC () <<%prefix%><%module%>ControllerDelegate>
 
-@property (nonatomic, strong) <%prefix%>TableContainerView* contentView;
+@property (nonatomic, strong) ANTableContainerView* contentView;
 @property (nonatomic, strong) <%prefix%><%module%>Controller* controller;
 
 @end
@@ -25,7 +26,7 @@
     self = [super init];
     if (self)
     {
-        self.contentView = [<%prefix%>TableContainerView containerWithTableViewStyle:UITableViewStyleGrouped];
+        self.contentView = [ANTableContainerView containerWithTableViewStyle:UITableViewStyleGrouped];
         self.controller = [[<%prefix%><%module%>Controller alloc] initWithTableView:self.contentView.tableView];
         self.controller.delegate = self;
     }
@@ -57,9 +58,9 @@
     [self.controller updateDataSource:dataSource];
 }
 
-#pragma mark - CDTableController Delegate
+#pragma mark - ANTableController Delegate
 
-- (void)itemSelectedWithModel:(<%prefix%>CellViewModel *)model
+- (void)itemSelectedWithModel:(<%prefix%><%module%>CellViewModel *)model
 {
     
 }
